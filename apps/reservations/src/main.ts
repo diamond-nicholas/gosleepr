@@ -4,7 +4,6 @@ import { ReservationsModule } from './reservations.module';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
-  console.log('test');
   const app = await NestFactory.create(ReservationsModule);
   app.useGlobalPipes(
     new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
